@@ -42,7 +42,7 @@ pfnparam.size = length(func);
 pfnparam.dur = length(func)/funcFreq;
 
 %set lookup table
-funlookup.name = [num2str(sweepRange) 'deg_altsweeps_at_' num2str(sweepRate) 'degsec_' num2str(objSize) 'pxo'];
+funlookup.name = ['oscillate_' sprintf('%03d', sweepRange) 'arc_at_' sprintf('%03d', sweepRate) 'ds_' sprintf('%02d', objSize) 'pxo'];
 funlookup.sweepRange = sweepRange;
 funlookup.sweepRangePx = range_px;
 funlookup.sweepRate = sweepVelocity_actual;

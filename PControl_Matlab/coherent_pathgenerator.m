@@ -16,7 +16,7 @@ function  path = coherent_pathgenerator(n,amp,funcFreq)
 %% important variables
 % can adjust these variables to adjust path smoothing
 
-smoothNoise = .1; %increase to increase gaussian smoothing
+smoothNoise = 1.9; %increase to increase gaussian smoothing
 
 %% generate random white noise
 b = 50;

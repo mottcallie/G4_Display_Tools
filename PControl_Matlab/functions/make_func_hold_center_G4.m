@@ -28,7 +28,7 @@ pfnparam.size = length(func);
 pfnparam.dur = length(func)/funcFreq;
 
 %set lookup table
-funlookup.name = [num2str(center) 'pxhold'];
+funlookup.name = ['holdcenter_' sprintf('%02d',objSize) 'pxo'];
 funlookup.sweepRange = 0;
 funlookup.sweepRangePx = 0;
 funlookup.sweepRate = 0;

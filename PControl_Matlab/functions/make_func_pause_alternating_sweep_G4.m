@@ -17,7 +17,7 @@ function make_func_pause_alternating_sweep_G4(funcN, sweepRange, sweepRate, objS
 userSettings
 funcFreq = 500;
 
-pauseDur = 4.25; %sec, pause preceding oscillation
+pauseDur = 5; %sec, pause preceding oscillation
 % note: the pause duration here is a bit odd to account for the DAC/panel start delay
 sweepDur = 60; %sec, total oscillation time
 

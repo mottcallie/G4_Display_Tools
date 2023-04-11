@@ -48,7 +48,7 @@ pfnparam.size = length(func);
 pfnparam.dur = length(func)/funcFreq;
 
 %set lookup table
-funlookup.name = ['optomotor_at_' num2str(sweepRate) 'degsec'];
+funlookup.name = ['optomotor_at_' sprintf('%03d', sweepRate) 'ds'];
 funlookup.sweepDur = sweepDur;
 funlookup.breakDur = breakDur;
 funlookup.sweepRange = 0;

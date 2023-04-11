@@ -62,7 +62,7 @@ pattern.data = make_pattern_vector_g4(pattern);
 %% save pattern data
 
 %set and save pattern data
-pattName = [sprintf('%04d', pattN) '_' num2str(objWidth) 'px_vgrating'];
+pattName = [sprintf('%04d', pattN) '_' sprintf('%02d', objWidth) 'px_vgrating'];
 matFileName = fullfile([exp_path, '\Patterns'], [pattName, '.mat']);
 save(matFileName, 'pattern');
 

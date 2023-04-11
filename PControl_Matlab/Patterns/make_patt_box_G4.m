@@ -56,8 +56,8 @@ for x = 2:frameM
 end
 
 %save lookup table
-patlookup.fullname = [num2str(objWidth) 'px_' num2str(objGS) 'gs' objPolar '_box_' num2str(distFromTop) 'high_' num2str(bckGS) 'gsbck'];
-patlookup.name = [num2str(objWidth) 'px_' objPolar 'box_' num2str(distFromTop) 'high_only'];
+patlookup.fullname = [sprintf('%02d', objWidth) 'px_' num2str(objGS) 'gs' objPolar '_box_' sprintf('%02d', distFromTop) 'high_' num2str(bckGS) 'gsbck'];
+patlookup.name = [sprintf('%02d', objWidth) 'px_' objPolar 'box_' sprintf('%02d', distFromTop) 'high'];
 patlookup.size = objWidth;
 patlookup.height = distFromTop;
 patlookup.object = 'box';

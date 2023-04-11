@@ -49,8 +49,8 @@ while 1
         histogram(diff(path_centered-center).*funcFreq,'FaceColor','#0072BD')
         axis tight; ylabel('velocity'); xline(0);
         
-        check = input('\nRun again? (y/n) ', 's');
-        %check = 'n';
+        %check = input('\nRun again? (y/n) ', 's');
+        check = 'n';
     else
         disp('Path accepted!')
         break
