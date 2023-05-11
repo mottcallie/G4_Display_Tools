@@ -107,9 +107,11 @@ for v = 1:length(sweepVelocity_slow)
     f = f+1;
 end
 
-% broken sweeps
+% motion pulse sweeps
+pulse_range = 180;
+pulse_speeds = [25 75];
 for bs = 1:10
-    make_func_broken_sweep_G4(f, 180, 55, 6)
+    make_func_motion_pulse_G4(f, pulse_range, pulse_speeds, 6)
     f = f+1;
 end
 
