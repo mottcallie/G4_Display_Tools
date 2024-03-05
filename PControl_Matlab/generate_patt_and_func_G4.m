@@ -24,9 +24,10 @@ hgrtWidths = 16; %px
 
 % set brightness variables
 gs_max = 6;
+gs_max2 = 7;
 gs_grt = 0;
 
-% blank background
+% blank bright background
 make_patt_blank_G4(p, gs_max)
 p = p+1;
 
@@ -38,9 +39,10 @@ for db = 1:length(barWidths)
 end
 
 % bright bars
+barWidths = [4 12 18 24]; %px
 for bb = 1:length(barWidths)
     thisbar = barWidths(bb);
-    make_patt_verticalbar_G4(p, thisbar, 'bright', gs_max)
+    make_patt_verticalbar_G4(p, thisbar, 'bright', gs_max2)
     p = p+1;
 end
 
@@ -66,6 +68,11 @@ for hg = 1:length(hgrtWidths)
     make_patt_horizontalgrating_G4(p, thisgrt, gs_grt, gs_max)
     p = p+1;
 end
+
+% blank dark background
+maxGS = 15;
+make_patt_onoff_blank_G4(p, maxGS)
+p = p+1;
 
 
 %% Generate functions
@@ -115,6 +122,13 @@ for bs = 1:10
     f = f+1;
 end
 
+% motion pulse sweeps
+pulse_range = 180;
+for bs = 1:10
+    make_func_stationary_pulse_G4(f, pulse_range, 6)
+    f = f+1;
+end
+
 % % optomotor reflex
 % for v = 1:length(sweepVelocity)
 %     make_func_optomotor_sweep_G4(f, sweepVelocity(v))
@@ -122,14 +136,17 @@ end
 % end
 % 
 % % coherent path
-sweepRange = 100; %deg
-funcDur = 60; %sec
-objSize = 6; %px
-for cp = 1:25
-    make_func_coherentpath_G4(f, sweepRange, funcDur, objSize)
-    f = f+1;
-end
+% sweepRange = 100; %deg
+% funcDur = 60; %sec
+% objSize = 6; %px
+% for cp = 1:25
+%     make_func_coherentpath_G4(f, sweepRange, funcDur, objSize)
+%     f = f+1;
+% end
 
+% alternating holds
+make_func_alternating_pos_G4(f)
+f = f+1;
 
 
 %% store current experiment data

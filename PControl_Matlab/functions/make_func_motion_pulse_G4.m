@@ -19,7 +19,7 @@ function make_func_motion_pulse_G4(funcN, sweepRange, sweepRate, objSize)
 userSettings
 funcFreq = 500;
 
-breakDur = 2; %second
+breakDur = 1; %second
 px_center = 88 - (objSize/2); %set sweep center
 px_hidden = 184 - (objSize/2); %set hidden position (empty column)
 
@@ -77,7 +77,7 @@ for rp = randperm(totalSweeps)
     func = [func breaks_sr thisSweep breaks_sr]; %combine
 end
 % add extra break buffer
-func = [func repmat(breaks_sr,1,5)];
+func = [func repmat(breaks_sr,1,1)];
 
 %set function data
 pfnparam.func = func;

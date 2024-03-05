@@ -33,7 +33,7 @@ if contains(objPolar,'d') %dark bar on bright background
     bckGS = maxGS; %background
 else %bright bar on dark background
     objGS = maxGS; %object
-    bckGS = 1; %background
+    bckGS = 0; %background
 end
 
 

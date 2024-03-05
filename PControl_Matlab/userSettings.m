@@ -1,6 +1,4 @@
-mfile_path = mfilename('fullpath');
-[root_path, ~, ~] = fileparts(mfile_path);
-
+root_path = 'C:\Users\wilson\Dropbox (HMS)\MATLAB\G4_Display_Tools\PControl_Matlab';
 
 controller_path = fullfile(root_path, 'controller' );
 function_path = fullfile(root_path, 'functions'); 
