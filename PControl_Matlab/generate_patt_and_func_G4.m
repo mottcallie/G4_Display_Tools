@@ -148,6 +148,13 @@ end
 make_func_alternating_pos_G4(f)
 f = f+1;
 
+% motion pulse sweeps
+pulse_range = 270;
+pulse_speeds = [25 75];
+for bs = 1:10
+    make_func_motion_pulse_G4(f, pulse_range, pulse_speeds, 6)
+    f = f+1;
+end
 
 %% store current experiment data
 create_currentExp(exp_path)
