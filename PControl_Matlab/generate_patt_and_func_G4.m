@@ -156,6 +156,14 @@ for bs = 1:10
     f = f+1;
 end
 
+% motion pulse sweeps
+pulse_range = 180;
+pulse_speeds = 25;
+for bs = 1:10
+    make_func_motion_pulse_G4(f, pulse_range, pulse_speeds, 6)
+    f = f+1;
+end
+
 %% store current experiment data
 create_currentExp(exp_path)
 
