@@ -1,16 +1,20 @@
 % make_patt_verticalgrating_G4
-% pattern generator, creates a vertical grating
-
+% Pattern generator that creates a vertical grating pattern for the G4 display.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% objWidth - size of bar
-% grtGS - grating intensity
-% bckGS - background intensity
-
-% 10/25/2021 - MC created
-% 10/29/2021 - MC added blank
-% 12/01/2021 - MC added grating gs
-
+%   pattN - Pattern number for saving the generated pattern.
+%   objWidth - Size of the bars in the vertical grating.
+%   grtGS - Grating intensity (grayscale value).
+%   bckGS - Background intensity (grayscale value).
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 10/25/2021 - MC
+% Updated: 10/29/2021 - MC added blank functionality.
+%          12/01/2021 - MC added grating grayscale support.
+%
 function  make_patt_verticalgrating_G4(pattN, objWidth, grtGS, bckGS)
 
 %% set meta data

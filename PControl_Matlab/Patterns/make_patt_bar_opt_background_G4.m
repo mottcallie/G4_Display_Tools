@@ -1,18 +1,26 @@
 % make_patt_bar_opt_background_G4
-% pattern generator, creates a single bar +/- background grating
-
+% Pattern generator that creates a single bar pattern with an optional background grating.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% objWidth - size of bar
-% grtWidth - size of grating
-% grtSelect - 0 no grating, 1 with grating, -1 against grating
-% objPolar - set polarity to dark or bright vs background
-% grtGS - grating intensity
-% bckGS - background intensity
-
-% 10/29/2021 - MC created
-% 12/01/2021 - MC added grating gs
-
+%   pattN - Pattern number for saving the generated pattern.
+%   objWidth - Size of the bar in pixels.
+%   grtWidth - Size of the grating in pixels.
+%   grtSelect - Selection for grating:
+%               0 - no grating,
+%               1 - with grating,
+%               -1 - against grating.
+%   objPolar - Set polarity to 'dark' for a dark object on a bright background 
+%              or 'bright' for a bright object on a dark background.
+%   grtGS - Grayscale intensity of the grating.
+%   bckGS - Grayscale intensity of the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 10/29/2021 - MC
+% Updated: 12/01/2021 - MC added grating grayscale support.
+%
 function  make_patt_bar_opt_background_G4(pattN, objWidth, grtWidth, grtSelect, objPolar, grtGS, maxGS)
 
 %% set meta data

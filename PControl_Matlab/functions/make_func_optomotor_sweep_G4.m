@@ -1,16 +1,19 @@
-% make_func_alternating_sweep_G4
-% function generator - makes a function for sweeping vertical gratings in
-% order to generate an optomotor reflex. Pauses, then sweeps CW, pauses,
-% then sweeps CCW, pauses, etc.
+% make_func_optomotor_sweep_G4
+% Function generator that creates a function for sweeping vertical gratings 
+% to generate an optomotor reflex. The function includes pauses, then sweeps 
+% clockwise (CW), pauses, then sweeps counterclockwise (CCW), and pauses again.
 %
-% INPUTS
-% funcN - specify function # to save as
-% sweepRate - specifies sweep velocity in degrees/sec
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   sweepRate - Specifies the sweep velocity in degrees/sec.
 %
-% Created 09/05/2022 - MC
-% Updated 10/05/2022 - MC adjusted sweep/break times
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
 %
-
+% Created: 09/05/2022 - MC
+% Updated: 10/05/2022 - MC adjusted sweep and break times.
+%
 function make_func_optomotor_sweep_G4(funcN, sweepRate)
 
 %% load settings

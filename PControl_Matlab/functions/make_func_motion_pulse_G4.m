@@ -1,18 +1,21 @@
-% make_func_alternating_sweep_G4
-% function generator - makes a function for separating the position and
-% velocity components of a stimulus. Object will populate a given sweep
-% range with broken up sweeps of a specified length and speed in either
-% direction. Presentation randomized each time.
-
-% INPUTS
-% funcN - specify function # to save as
-% sweepRange - specifies total sweep range, in degree
-% sweepRate - specifies sweep velocity, in degrees/sec
-% objSize - centers sweep
-
-% 02/19/2023 - MC created
-% 04/27/2023 - MC updated to include speed range
-
+% make_func_motion_pulse_G4
+% Function generator that creates a function for generating motion pulses 
+% of visual objects across a specified range at a specified velocity. 
+% The object will have pauses between sweeps to allow for optogenetic stimulation.
+%
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   sweepRange - Specifies the total sweep range in degrees.
+%   sweepRate - Specifies the sweep velocity in degrees/sec.
+%   objSize - Size of the object, used to center the sweep.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Created: 02/19/2023 - MC
+% Updated: 04/27/2023 - MC updated to include speed range.
+%
 function make_func_motion_pulse_G4(funcN, sweepRange, sweepRate, objSize)
 
 %% load settings

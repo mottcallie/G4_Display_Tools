@@ -1,18 +1,21 @@
-% make_func_alternating_sweep_G4
-% function generator - makes a function for separating the position and
-% velocity components of a stimulus. Object will populate a given sweep
-% range with broken up sweeps of a specified length and speed in either
-% direction. Presentation randomized each time.
-
-% INPUTS
-% funcN - specify function # to save as
-% sweepRange - specifies total sweep range, in degree
-% sweepRate - specifies sweep velocity, in degrees/sec
-% objSize - centers sweep
-
-% 02/19/2023 - MC created
-% 04/27/2023 - MC updated to include speed range
-
+% make_func_stationary_pulse_G4
+% Function generator that creates a function for producing a stationary
+% pulse stimulus with alternating positions and velocities. The object
+% will populate a specified sweep range with broken-up sweeps of a 
+% specified length and speed, randomized for each presentation.
+%
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   sweepRange - Total sweep range in degrees.
+%   objSize - Size of the object, used to center the sweep.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Created: 02/19/2023 - MC
+% Updated: 04/27/2023 - MC updated to include speed range.
+%
 function make_func_stationary_pulse_G4(funcN, sweepRange, objSize)
 
 %% load settings

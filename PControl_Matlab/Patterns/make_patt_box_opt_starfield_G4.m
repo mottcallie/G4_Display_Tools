@@ -1,16 +1,23 @@
 % make_patt_box_opt_starfield_G4
-% pattern generator, creates a box +/- starfield
-
+% Pattern generator that creates a box pattern with an optional starfield.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% objWidth - size of box
-% grtSelect - 0 no starfield, 1 with starfield, -1 against starfield
-% starNumber - total number of stars, randomly distributed
-% starGS - starfield intensity
-% bckGS - background intensity
-
-% 01/11/2022 - MC created
-
+%   pattN - Pattern number for saving the generated pattern.
+%   objWidth - Size of the box in pixels.
+%   starSelect - Selection for starfield:
+%                0 - no starfield,
+%                1 - with starfield,
+%                -1 - against starfield.
+%   starNumber - Total number of stars randomly distributed in the starfield.
+%   starGS - Grayscale intensity of the stars.
+%   bckGS - Grayscale intensity of the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 01/11/2022 - MC
+%
 function  make_patt_box_opt_starfield_G4(pattN, objWidth, starSelect, starNumber, starGS, bckGS)
 
 %% set meta data

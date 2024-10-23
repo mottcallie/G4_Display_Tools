@@ -1,12 +1,17 @@
 % make_patt_onoff_blank_G4
-% pattern generator, creates a blank background where xpos alternates
-% between on and off
-
+% Pattern generator that creates a blank background where the x position 
+% alternates between on and off.
+%
 % INPUTS:
-% pattN - pattern number when saving
-
-% 11/05/2021 - MC created
-
+%   pattN - Pattern number for saving the generated pattern.
+%   bckGS - Grayscale intensity for the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to 
+%   the specified paths.
+%
+% Created: 11/05/2021 - MC
+%
 function  make_patt_onoff_blank_G4(pattN,bckGS)
 
 %% set meta data

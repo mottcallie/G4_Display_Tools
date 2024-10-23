@@ -1,14 +1,18 @@
 % make_patt_starfield_G4
-% pattern generator, creates a starfield
-
+% Pattern generator that creates a starfield pattern for the G4 display.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% starNumber - total number of stars, randomly distributed
-% starGS - starfield intensity
-% bckGS - background intensity
-
-% 01/10/2022 - MC created
-
+%   pattN - Pattern number for saving the generated starfield pattern.
+%   starNumber - Total number of stars randomly distributed in the starfield.
+%   starGS - Grayscale intensity of the stars.
+%   bckGS - Grayscale intensity of the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 01/10/2022 - MC
+%
 function  make_patt_starfield_G4(pattN, starNumber, starGS, bckGS)
 
 %% set meta data

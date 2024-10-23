@@ -1,17 +1,17 @@
 % coherent_pathgenerator.m
-% generates coherent (smooth) 2D noise for presenting an object with
-% pseudorandomized motion on display arenas
+% Generates coherent (smooth) 2D noise for presenting an object with
+% pseudorandomized motion on display arenas.
 %
 % INPUTS:
-% n - length
-% amp - amplitude
-% funcFreq - frequency to interpolate to
+%   n - Length of the generated path.
+%   amp - Amplitude of the noise.
+%   funcFreq - Frequency to interpolate the path to.
 %
 % OUTPUT:
-% path - generated object path for pattern function
-% Created: 08/05/2022 MC
+%   path - Generated object path for pattern function.
 %
-
+% Created: 08/05/2022 - MC
+%
 function  path = coherent_pathgenerator(n,amp,funcFreq)
 %% important variables
 % can adjust these variables to adjust path smoothing

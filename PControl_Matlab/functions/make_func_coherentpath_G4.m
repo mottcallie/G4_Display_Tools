@@ -1,15 +1,19 @@
 % make_func_coherentpath_G4
-% function generator - makes a function for moving a visual object along a
-% coherent, pseudorandom path
+% Function generator that creates a function for moving a visual object 
+% along a coherent, pseudorandom path.
 %
-% INPUTS
-% funcN - specify function # to save as
-% sweepRange - specifies sweep range in degrees, centered at midline
-% sweepRate - specifies sweep velocity in degrees/sec
-% objSize - centers sweep
-
-% 08/05/2022 - MC created
-
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   sweepRange - Specifies the sweep range in degrees, centered at midline.
+%   funcDur - Duration of the function in seconds.
+%   objSize - Size of the object, used to center the sweep.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Created: 08/05/2022 - MC
+%
 function make_func_coherentpath_G4(funcN, sweepRange, funcDur, objSize)
 
 %% load in and set function settings

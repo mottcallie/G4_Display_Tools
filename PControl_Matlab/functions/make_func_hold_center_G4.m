@@ -1,13 +1,17 @@
 % make_func_hold_center_G4
-% function generator - makes a function for holding at the center position
-
-% INPUTS
-% funcN - specify function # to save as
-% altSweep - specifies both the range and sweep rate (1Hz)
-% objSize - centers sweep
-
-% 10/25/2021 - MC created
-
+% Function generator that creates a function for holding at the center 
+% position of the visual stimulus.
+%
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   objSize - Size of the object, used to center the hold position.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Created: 10/25/2021 - MC
+%
 function make_func_hold_center_G4(funcN,objSize)
 
 %% load settings

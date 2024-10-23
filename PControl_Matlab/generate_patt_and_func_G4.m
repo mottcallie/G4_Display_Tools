@@ -1,12 +1,26 @@
 % generate_patt_and_func_G4
-% generate a series of patterns and functions for the G4 display
-
+%
+% Generates a series of patterns and functions for the G4 display.
+% 
+% This script performs the following tasks:
+% 1. Clears previous patterns and functions from specified directories.
+% 2. Creates a variety of visual patterns including blank backgrounds, 
+%    dark and bright bars, boxes, and gratings with specified sizes and 
+%    brightness.
+% 3. Generates functions for the G4 display, including holding patterns, 
+%    oscillating sweeps, motion pulses, and alternating positions.
+%
+% INPUTS:
+%   None (settings are loaded from an external file).
+%
+% OUTPUTS:
+%   Generated patterns and functions are saved to specified folders.
+%
+%% Initialize
 clear
 close all
-
 % load settings
 userSettings
-
 
 %% Generate patterns
 disp('generating g4 patterns...')

@@ -1,11 +1,16 @@
-% make_patt_verticalbar_G4
-% pattern generator, creates a single bar
-
+% make_patt_blank_G4
+% Pattern generator that creates a blank background pattern for the G4 display.
+%
 % INPUTS:
-% pattN - pattern number when saving
-
-% 11/05/2021 - MC created
-
+%   pattN - Pattern number for saving the generated pattern.
+%   bckGS - Grayscale intensity for the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 11/05/2021 - MC
+%
 function  make_patt_blank_G4(pattN,bckGS)
 
 %% set meta data

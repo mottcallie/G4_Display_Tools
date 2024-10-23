@@ -1,14 +1,20 @@
 % make_patt_verticalbar_G4
-% pattern generator, creates a single bar
-
+% Pattern generator that creates a single vertical bar for the G4 display.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% objWidth - size of bar
-% objPolar - set polarity to dark or bright vs background
-
-% 10/25/2021 - MC created
-% 10/29/2021 - MC added blank
-
+%   pattN - Pattern number for saving the generated pattern.
+%   objWidth - Size of the bar in pixels.
+%   objPolar - Set polarity to 'dark' for a dark bar on a bright background 
+%              or 'bright' for a bright bar on a dark background.
+%   maxGS - Maximum grayscale value for the bar and background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 10/25/2021 - MC
+% Updated: 10/29/2021 - MC added blank functionality.
+%
 function  make_patt_verticalbar_G4(pattN, objWidth, objPolar, maxGS)
 
 %% set meta data

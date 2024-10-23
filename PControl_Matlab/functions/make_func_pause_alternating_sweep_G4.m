@@ -1,16 +1,20 @@
-% make_func_alternating_sweep_G4
-% function generator - makes a function for sweeping visual objects across
-% a specified range and at a specified velocity, includes X sec pause at
-% the start of each trial to allow for optogenetic stimulation
-
-% INPUTS
-% funcN - specify function # to save as
-% sweepRange - specifies sweep range in degrees, centered at midline
-% sweepRate - specifies sweep velocity in degrees/sec
-% objSize - centers sweep
-
-% 10/06/2022 - MC updated
-
+% make_func_pause_alternating_sweep_G4
+% Function generator that creates a function for sweeping visual objects across
+% a specified range and at a specified velocity. Includes a pause at the
+% start of each trial to allow for optogenetic stimulation.
+%
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   sweepRange - Specifies the sweep range in degrees, centered at midline.
+%   sweepRate - Specifies the sweep velocity in degrees/sec.
+%   objSize - Size of the object, used to center the sweep.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Updated: 10/06/2022 - MC
+%
 function make_func_pause_alternating_sweep_G4(funcN, sweepRange, sweepRate, objSize)
 
 %% load settings

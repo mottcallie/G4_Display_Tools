@@ -1,14 +1,18 @@
-% make_func_hold_center_G4
-% function generator - makes a function for alternating the position of a
-% pattern between two positions
-
-% INPUTS
-% funcN - specify function # to save as
-% altSweep - specifies both the range and sweep rate (1Hz)
-% objSize - centers sweep
-
-% 11/03/2023 - MC created
-
+% make_func_alternating_pos_G4
+% Function generator that creates a function for alternating the position 
+% of a pattern between two specified positions.
+%
+% INPUTS:
+%   funcN - Function number for saving the generated function.
+%   altSweep - Specifies both the range and sweep rate (1 Hz).
+%   objSize - Size of the object, used to center the sweep.
+%
+% OUTPUTS:
+%   Saves the generated function data and lookup table to the specified 
+%   paths, along with a header for the function file.
+%
+% Created: 11/03/2023 - MC
+%
 function make_func_alternating_pos_G4(funcN)
 
 %% load settings

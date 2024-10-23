@@ -1,15 +1,20 @@
 % make_patt_box_G4
-% pattern generator, creates a single box at set height
-
+% Pattern generator that creates a single box at a set height for the G4 display.
+%
 % INPUTS:
-% pattN - pattern number when saving
-% objWidth - size of box (px)
-% objPolar - set polarity to dark or bright vs background
-% distFromTop - set distance of object from top of arena (px)
-% bckGS - background intensity
-
-% 01/10/2021 - MC created
-
+%   pattN - Pattern number for saving the generated pattern.
+%   objWidth - Size of the box in pixels.
+%   objPolar - Set polarity to 'dark' for a dark object on a bright background 
+%              or 'bright' for a bright object on a dark background.
+%   distFromTop - Distance of the object from the top of the arena in pixels.
+%   maxGS - Maximum grayscale intensity for the background.
+%
+% OUTPUTS:
+%   Saves the generated pattern data, lookup table, and pattern file to the specified 
+%   paths.
+%
+% Created: 01/10/2021 - MC
+%
 function  make_patt_box_G4(pattN, objWidth, objPolar, distFromTop, maxGS)
 
 %% set meta data
